@@ -31,8 +31,10 @@ Route::get('/home',[HomeController::class,'index']);
 Route::get('/foodmenu',[FoodMenu::class,'foodmenu'])->name('foodmenu');
 Route::get('/foodmenu/deletefood/{id}',[FoodMenu::class,'deletefood'])->name('deletefood');
 Route::post('/addfood',[FoodMenu::class,'addfood'])->name('addfood');
-// Route::post('/orderfood/{id}',[FoodMenu::class,'orderfood'])->name('orderfood');
-Route::get('/order/{id}',[FoodMenu::class,'order'])->name('order');
+
+Route::get('/order/list',[FoodMenu::class,'orderList'])->name('orderList');
+Route::get('/order/{food_id}',[FoodMenu::class,'order'])->name('order');
+Route::post('/order/details',[FoodMenu::class,'details'])->name('details');
 
 
 

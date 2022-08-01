@@ -61,23 +61,34 @@ class FoodMenu extends Controller
         return back();
     }
 
-//    public function orderfood(Request $request, $id)
-//    {
-//     $foodid=$id;
-//     $quantity = $request->quantity;
 
-//     $OrderFood = new FoodOrder;
-//     $OrderFood -> food_id=$foodid;
-//     $OrderFood -> quantity=$quantity;
-//     $OrderFood ->save();
-
-//     return redirect()->back();
-//    }
-
-   public function order($id)
+   public function order($food_id)
    {
-    $lists = Food::findOrFail($id);
-    return view('food.order',compact('lists'));
+    $data['list'] = Food::findOrFail($food_id);
+    // dd($data);
+    return view('food.order', $data);
+     //return view('food.order');
+    
+   }
+
+   public function details(Request $request)
+   {
+    FoodOrder::insert([
+        'title'=>$request->title,
+        'price'=>$request->price,
+        'name'=>$request->name,
+        'number'=>$request->number,
+        'quantity'=>$request->quantity,
+        'address'=>$request->address,
+    ]);
+
+    return back();
+   }
+
+   public function orderList()
+   {
+    $lists = FoodOrder::all();
+    return view('food.orderList',compact('lists'));
    }
     
 

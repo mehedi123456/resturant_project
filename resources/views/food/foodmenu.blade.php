@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="image" class="form-label">Image</label>
+                    <label for="image" class="form-label">Food Image</label>
                     <input name="image" type="file" class="form-control" id="price" value="{{ old('image') }}">
                 </div>
 
@@ -59,7 +59,7 @@
           <tr>
             <th style="padding:30px">price</th>
             <th style="padding:30px">Title</th>
-            <th style="padding:30px">Image</th>
+            <th style="padding:30px">Food Image</th>
             <th style="padding:30px">Description</th>
             <th style="padding:30px">Action</th>
           </tr>

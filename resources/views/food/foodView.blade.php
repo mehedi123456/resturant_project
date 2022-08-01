@@ -2,10 +2,10 @@
 <section class="section" id="menu">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-1">
                 <div class="section-heading">
                     <h6>Our Menu</h6>
-                    <h2>Our selection of product with quality taste</h2>
+                    
                 </div>
             </div>
         </div>
