@@ -13,6 +13,7 @@ class FoodMenu extends Controller
     {
         // dd("lists");
         $data['lists'] = Food::all();
+       
         return view('welcome', $data);
        
     }
@@ -66,13 +67,21 @@ class FoodMenu extends Controller
    {
     $data['list'] = Food::findOrFail($food_id);
     return view('food.order', $data);
-     
-     
     
    }
 
    public function details(Request $request)
    {
+
+    $request->validate([
+        'title'    => 'required',
+        'price'    => 'required',
+        'name'     => 'required',
+        'number'   => 'required',
+        'quantity' => 'required',
+        'address'  => 'required',
+        
+    ]);
     FoodOrder::insert([
         'title'=>$request->title,
         'price'=>$request->price,

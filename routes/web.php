@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChefController;
 use App\Http\Controllers\FoodMenu;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,9 @@ Route::get('/order/details/orderDelivered/{order_id}',[FoodMenu::class,'orderDel
 
 
 //food end
+
+
+
 
 
 
