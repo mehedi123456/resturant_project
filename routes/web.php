@@ -17,10 +17,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-    
-//     return view('welcome');
-// });
+
 //food start 
 
 
@@ -35,7 +32,7 @@ Route::post('/addfood',[FoodMenu::class,'addfood'])->name('addfood');
 Route::get('/order/list',[FoodMenu::class,'orderList'])->name('orderList');
 Route::get('/order/{food_id}',[FoodMenu::class,'order'])->name('order');
 Route::post('/order/details',[FoodMenu::class,'details'])->name('details');
-
+Route::get('/order/details/orderDelivered/{order_id}',[FoodMenu::class,'orderDelivered'])->name('orderDelivered');
 
 
 

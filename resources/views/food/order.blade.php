@@ -56,41 +56,53 @@
       <div class="row">
           <div class="col-md-8 offset-md-2">
   
-            <h4 style="padding-top: 100px;">Give Your Information to Order this Food</h4>
+            <h4 align='center' style="padding-top: 100px;">Give Your Information to Order this Food</h4>
             <br>
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach ($errors->all() as $error )
+                <li>{{ $error }}</li>
+  
+                @endforeach
+  
+              </ul>
+  
+            </div><br />
+  
+          @endif
            
               <form action="{{ route('details',$list->id) }}" method="POST" enctype="multipart/form-data">
                   @csrf
   
 
                   <div class="mb-3">
-                    <label for="title" class="form-label">Want to Order: </label>
-                    <input name="title" type="text" class="form-control" id="title"  value="{{ $list->title }}">
+                    <input name="title" type="hidden" class="form-control" id="title"  value="{{ $list->title }}">
                  </div>
 
                  <div class="mb-3">
-                    <label for="price" class="form-label">Price:  </label>
-                    <input name="price" type="text" class="form-control" id="price"  value="{{ $list->price }}">
+                    <input name="price" type="hidden" class="form-control" id="price"  value="{{ $list->price }}">
                  </div>
 
                   <div class="mb-3">
                       <label for="name" class="form-label">Name</label>
-                      <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Your Name">
+                      <input name="name" type="text" class="form-control" id="name" value="{{ old('name') }}" placeholder="Enter Your Name">
                   </div>
   
                   <div class="mb-3">
                       <label for="number" class="form-label">Phone Number</label>
-                      <input name="number" type="number" class="form-control" id="number"  placeholder="Your Phone Number">
+                      <input name="number" type="number" class="form-control" id="number" value="{{ old('number') }}" placeholder="Your Phone Number">
                   </div>
 
                   <div class="mb-3">
                     <label for="quantity" class="form-label">Quantity</label>
-                    <input name="quantity" type="number" class="form-control" id="number"  placeholder="Food Quantity">
+                    <input name="quantity" type="number" class="form-control" id="number"  value="{{ old('quantity') }}" placeholder="Food Quantity">
                 </div>
   
                   <div class="mb-3">
                     <label for="address" class="form-label">Address</label>
-                    <input name="address" type="text" class="form-control" id="address"  placeholder="Give Your Address">
+                    <input name="address" type="text" class="form-control" id="address"  value="{{ old('address') }}" placeholder="Give Your Address">
                   </div>
   
                   

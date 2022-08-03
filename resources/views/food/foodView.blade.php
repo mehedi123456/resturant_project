@@ -12,8 +12,8 @@
     </div>
     <div class="menu-item-carousel">
         <div class="row">
-        <div class="col-sm-8" >
-            {{-- <div class="owl-menu-item owl-carousel"> --}}
+         <div class="col-sm-8" >
+            
                 
 
             @foreach ($lists as $list)
@@ -22,7 +22,7 @@
 
                 <div class="item" >
                     <div style="background-image:url('/foodimage/{{ $list->image }}');" class='card' >
-                        <div>{{ $list->id }}</div>
+                        <div >{{ $list->id }}</div>
                         <div class="price"><h6>{{ $list->price }}</h6></div>
                         <div class='info'>
                            <h1 class='title'>{{ $list->title }}</h1>
@@ -32,13 +32,16 @@
                            </div>
                         </div>
                     </div>
-                    <a href="{{ url('/order') }}/{{ $list->id }}" class="btn-sm btn-primary" >Order</a>
+                    <div class="row">
+                        <a  href="{{ url('/order') }}/{{ $list->id }}" class="btn btn-primary" >Order Food</a> 
+                    </div>         
                 </div>
             </form>  
             @endforeach
             
+                
+            </div>
         </div>
-    </div>
     </div>
 </section>
 <!-- ***** Menu Area Ends ***** -->

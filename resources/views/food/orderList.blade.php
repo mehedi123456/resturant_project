@@ -1,14 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Klassy Cafe</title>
-</head>
+@extends('layouts.app');
+@section('content')
 <body>
     <div class="container">
         <div class="row">
@@ -18,11 +9,12 @@
                       <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Food Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Food Price</th>
+                        <th scope="col">Customer Name</th>
                         <th scope="col">Phone Number</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Address</th>
+                        <th scope="col">Action</th>
 
 
                       </tr>
@@ -39,6 +31,9 @@
                         <td>{{ $list->number }}</td>
                         <td>{{ $list->quantity }}</td>
                         <td>{{ $list->address }}</td>
+                        <td>
+                          <a href="{{ url('/order/details/orderDelivered') }}/{{ $list->id }}" class="btn-sm btn-danger">Delivered</a>
+                        </td>
                       </tr>
                     @endforeach  
                     </tbody>
@@ -49,7 +44,7 @@
     </div>
     
 </body>
-</html>
+@endsection
 
 
 

@@ -55,6 +55,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
+        <h4 align='center'>Delete Food</h4>
         <table>
           <tr>
             <th style="padding:30px">price</th>

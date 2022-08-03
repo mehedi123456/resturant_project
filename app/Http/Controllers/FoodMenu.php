@@ -65,9 +65,9 @@ class FoodMenu extends Controller
    public function order($food_id)
    {
     $data['list'] = Food::findOrFail($food_id);
-    // dd($data);
     return view('food.order', $data);
-     //return view('food.order');
+     
+     
     
    }
 
@@ -89,6 +89,13 @@ class FoodMenu extends Controller
    {
     $lists = FoodOrder::all();
     return view('food.orderList',compact('lists'));
+   }
+
+   public function orderDelivered($order_id)
+   {
+       FoodOrder::findOrFail($order_id)->delete();
+        
+        return back();
    }
     
 
