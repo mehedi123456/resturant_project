@@ -97,7 +97,8 @@
 
                   <div class="mb-3">
                     <label for="quantity" class="form-label">Quantity</label>
-                    <input name="quantity" type="number" class="form-control" id="number"  value="{{ old('quantity') }}" placeholder="Food Quantity">
+                    <input name="quantity" type="number" class="form-control" id="quantity" min="1" max="8" value="{{ old('quantity') }}" placeholder="Food Quantity">
+                    
                 </div>
   
                   <div class="mb-3">
