@@ -72,7 +72,8 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                            <img src="assets/images/klassy-logo.png" align="klassy cafe">
+                            <a class="menu-trigger"><span>Menu</span></a>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -185,7 +186,7 @@
                             <h6>About Us</h6>
                             <h2>We Leave A Delicious Memory For You</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored"> </a> <br><br></p>
+                        <p>Klassy Cafe is one of the best cafe in this area  <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored"> </a> <br><br></p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -202,7 +203,7 @@
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
                         <div class="thumb">
-                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                            
                             <img src="assets/images/about-video-bg.jpg" alt="">
                         </div>
                     </div>
