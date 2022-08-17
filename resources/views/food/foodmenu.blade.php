@@ -69,10 +69,10 @@
             
           
           <tr align="center">
-            <td>{{ $list->price }}</td>
-            <td>{{ $list->title }}</td>
-            <td><img height="200" width="200" src="/foodimage/{{ $list->image }}" ></td>
-            <td>{{ $list->description }}</td>
+            <td style="padding: 20px;">{{ $list->price }}</td>
+            <td style="padding: 20px;">{{ $list->title }}</td>
+            <td style="padding: 20px;"><img height="200" width="200" src="/foodimage/{{ $list->image }}" ></td>
+            <td style="padding: 20px;">{{ $list->description }}</td>
             <td>
               <a href="{{ url('/foodmenu/deletefood') }}/{{ $list->id }}" class="btn-sm btn-danger">Delete</a>
             </td>

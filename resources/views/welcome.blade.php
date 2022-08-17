@@ -186,7 +186,7 @@
                             <h6>About Us</h6>
                             <h2>We Leave A Delicious Memory For You</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best cafe in this area  <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored"> </a> <br><br></p>
+                        <p>Klassy Cafe is one of the best cafe in this area. Our aim is to provide happiness through well-prepared meals using only quality ingredients and a pleasant environment that will make you feel home-like.  <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored"> </a> <br><br></p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -237,7 +237,7 @@
                             <h6>Contact Us</h6>
                             <h2>Here You Can Make A Reservation Or Just walkin to our cafe</h2>
                         </div>
-                        <p>Donec pretium est orci, non vulputate arcu hendrerit a. Fusce a eleifend riqsie, namei sollicitudin urna diam, sed commodo purus porta ut.</p>
+                        <p>Hi! Please let us know how we can help.</p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="phone">
@@ -250,7 +250,7 @@
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">klassy@gmail.com</a><br><a href="#">info@company.com</a></span>
+                                    <span><a href="#">klassycafe@gmail.com</a><br><a href="#">info@company.com</a></span>
                                 </div>
                             </div>
                         </div>

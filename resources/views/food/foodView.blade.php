@@ -11,18 +11,17 @@
         </div>
     </div>
     <div class="menu-item-carousel">
-        <div class="row">
-         <div class="col-sm-8" >
-            
-                
-
+        
+         <div class="col-sm-6" >  
+           
             @foreach ($lists as $list)
-            <form action="{{ route('order',$list->id) }}" method="POST" >
+            <form style="padding-bottom: 20px; " action="{{ route('order',$list->id) }}" method="POST" >
                 @csrf      
 
                 <div class="item" >
                     <div style="background-image:url('/foodimage/{{ $list->image }}');" class='card' >
-                        <div >{{ $list->id }}</div>
+                      <input type="hidden" value="{{ $list->id }}">
+                        {{-- <div >{{ $list->id }}</div> --}}
                         <div class="price"><h6>{{ $list->price }}</h6></div>
                         <div class='info'>
                            <h1 class='title'>{{ $list->title }}</h1>
@@ -32,16 +31,19 @@
                            </div>
                         </div>
                     </div>
-                    <div class="row">
                         <a  href="{{ url('/order') }}/{{ $list->id }}" class="btn btn-primary" >Order Food</a> 
-                    </div>         
+                            
                 </div>
             </form>  
             @endforeach
             
                 
-            </div>
+            
         </div>
     </div>
 </section>
 <!-- ***** Menu Area Ends ***** -->
+
+
+
+
