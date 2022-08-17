@@ -2,8 +2,10 @@
 @section('content')
 <body>
     <div class="container">
+      <div style="background-color: #A9DFBF">
         <div class="row">
             <div class="col-md-12">
+              <h4 align='center'>List of Order</h4>
                 <table class="table">
                     <thead>
                       <tr>
@@ -42,7 +44,7 @@
             </div>
         </div>
     </div>
-    
+  </div>
 </body>
 @endsection
 

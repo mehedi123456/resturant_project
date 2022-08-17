@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChefController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FoodMenu;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,16 @@ Route::get('/order/details/orderDelivered/{order_id}',[FoodMenu::class,'orderDel
 //food end
 
 
+//Employee start
+Route::get('/deleteEmployee/{id}',[EmployeeController::class,'dropEmployee'])->name('dropEmployee');
+Route::get('/showemployee',[EmployeeController::class,'showemployee'])->name('showemployee');
+Route::get('/employee',[EmployeeController::class,'index'])->name('employee');
+Route::post('/addemployee',[EmployeeController::class,'addemployee'])->name('addemployee');
 
+
+
+
+//End Employee
 
 
 

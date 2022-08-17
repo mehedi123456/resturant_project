@@ -3,8 +3,10 @@
 
 <section>
   <div class="container">
+    <div style="background-color: #E59866">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+          <h4 align='center'>Add Food</h4>
 
         @if ($errors->any())
           <div class="alert alert-danger">
@@ -48,16 +50,20 @@
               </form>
         </div>
     </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="container">
+    <div style="background-color: #E59866">
     <div class="row">
       <div class="col-md-8 offset-md-2">
+        
         <h4 align='center'>Delete Food</h4>
         <table>
           <tr>
+            <th style="padding:30px">Food ID</th>
             <th style="padding:30px">price</th>
             <th style="padding:30px">Title</th>
             <th style="padding:30px">Food Image</th>
@@ -69,6 +75,7 @@
             
           
           <tr align="center">
+            <td style="padding: 20px;">{{ $list->id }}</td>
             <td style="padding: 20px;">{{ $list->price }}</td>
             <td style="padding: 20px;">{{ $list->title }}</td>
             <td style="padding: 20px;"><img height="200" width="200" src="/foodimage/{{ $list->image }}" ></td>
@@ -79,10 +86,11 @@
           </tr>
           @endforeach
         </table>
-
+        
       </div>
 
     </div>
+  </div>
   </div>
 </section>
 
